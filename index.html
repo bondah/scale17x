@@ -137,7 +137,7 @@
 				word-break: break-all;
 				background-color: #f2f2f2;
 				color: #5b5b5b;
-		    font:20px Monaco,Consolas,"Andale  Mono","DejaVu Sans Mono",monospace;
+		    font:25px Monaco,Consolas,"Andale  Mono","DejaVu Sans Mono",monospace;
 				-webkit-touch-callout: default;
 				-webkit-user-select: text;
 				-khtml-user-select: text;
@@ -287,7 +287,149 @@
 </div>
 
 <div class="slide">
-	<p></p>
+	<p>Your development environment needn't be anything complicated.<br><br>I use my computer and store the files on a backed-up network drive.</p>
+</div>
+
+<div class="slide">
+	<p>Steps to get your Open Data portal running:<br>
+		&emsp; 1: Install Ruby<br>
+		&emsp; 2: Install Jekyll<br>
+		&emsp; 3: Save code<br>
+		&emsp; 4: Add datasets<br>
+		&emsp; 5: Build site<br>
+		&emsp; 6: Copy site to web server<br>
+</p>
+</div>
+
+<div class="slide image_full">
+	<p>1: Install Ruby</p>
+	<img src="images/sea.jpg"/>
+</div>
+
+<div class="slide image_bottom">
+	<p>The Ruby install process will depend on your OS. I followed the steps on the Jekyll site.</p>
+	<img src="images/rubyinstall.png"/>
+</div>
+
+<div class="slide image_full">
+	<p>2: Install Jekyll</p>
+	<img src="images/sea.jpg"/>
+</div>
+
+<div class="slide image_bottom">
+	<p>Jekyll is installed as a Ruby gem. A Ruby gem is a program or library written in the Ruby language.</p>
+	<img src="images/rubygem.png"/>
+</div>
+
+<div class="slide">
+	<p>From a command prompt, type:<br>
+	<code>gem install jekyll bundler</code></p>
+</div>
+
+<div class="slide image_full">
+	<p>3: Save code</p>
+	<img src="images/sea.jpg"/>
+</div>
+
+<div class="slide image_bottom">
+	<p>Download the <a target="_blank" href="https://github.com/timwis/jkan">JKAN code from GitHub</a> and save to your development folder.</p>
+	<img src="images/jkanrepo.png"/>
+</div>
+
+<div class="slide image_bottom">
+	<p>At this point, I highly recommend setting up version control on your folder. I used GitHub because it also allows us to share our code.</p>
+	<img src="images/githubbh.png"/>
+</div>
+
+<div class="slide image_bottom bigger">
+	<p>Check out the examples for customization ideas.</p>
+	<img src="images/examples.png"/>
+</div>
+
+<div class="slide image_bottom">
+	<p>Like a lot of sites, JKAN uses <a target="_blank" href="https://getbootstrap.com/">Bootstrap</a> to create a responsive web page (resizes with browser).</p>
+	<img src="images/bootstrap.png"/>
+</div>
+
+<div class="slide image_bottom">
+	<p>You don't need to know Bootstrap to use JKAN. You can even customize your css (style) to match your brand using their tool!</p>
+	<img src="images/customboot.png"/>
+</div>
+
+<div class="slide image_bottom">
+	<p>Fill out some info about your site in the _config.yml file.</p>
+	<img src="images/config.png"/>
+</div>
+
+<div class="slide image_bottom">
+	<p>Fill out some info about your site in the _config.yml file.</p>
+	<img src="images/config.png"/>
+</div>
+
+<div class="slide image_full">
+	<p>4: Add datasets</p>
+	<img src="images/sea.jpg"/>
+</div>
+
+<div class="slide image_bottom">
+	<p>Datasets are added as <a target="_blank" href="https://www.markdownguide.org/">Markdown</a> files. Markdown is a markup language.</p>
+	<img src="images/markdown.png"/>
+</div>
+
+<div class="slide image_bottom">
+	<p>Your dataset Markdown format will be based on fields you set in the default.yml file.</p>
+	<img src="images/bikemd.png"/>
+</div>
+
+<div class="slide">
+	<p>If you want to edit the format (as opposed to the style) of your pages, use the html files in these folders:<br>&emsp; _layouts<br>&emsp; _includes<br></p>
+</div>
+
+<div class="slide image_bottom">
+	<p>The categories used to organize your data can be modified in the categories.yml</p>
+	<img src="images/categories.png"/>
+</div>
+
+<div class="slide image_bottom">
+	<p>Recommendation:<br><br>Start with datasets that are already published, but not in a machine-readable format.</p>
+	<img src="images/no.png"/>
+</div>
+
+<div class="slide image_bottom">
+	<p>Look for interesting data published as a PDF, that folks might like as a table so they can review/analyze.</p>
+	<img src="images/salary.png"/>
+</div>
+
+<div class="slide image_bottom">
+	<p>Similary, look for data shared on maps that folks might like to layer on their own map for further analysis.</p>
+	<img src="images/bikemap.png"/>
+</div>
+
+<div class="slide image_full">
+	<p>5: Build site</p>
+	<img src="images/sea.jpg"/>
+</div>
+
+<div class="slide">
+	<p>As you are working on the site, you can run a local web server to view your site. Type at a command prompt:<br>
+	<code>python -m SimpleHTTPServer 4000</code><br><br>
+	You will need <a target="_blank" href="https://www.python.org/">Python</a> (any version).</p>
+</div>
+
+<div class="slide">
+	<p>At the command prompt, change your directory to the project folder. Type at a command prompt:<br>
+	<code>bundle exec jekyll serve --baseurl ""</code><br><br>
+	Go to <code>http://localhost:4000</code> in a web browser</p>
+</div>
+
+<div class="slide image_full">
+	<p>6: Copy site to web server</p>
+	<img src="images/sea.jpg"/>
+</div>
+
+<div class="slide image_full">
+	<p>Bask in your success!</p>
+	<img src="images/boat.jpg"/>
 </div>
 
 <div class="slide black">
