@@ -4,6 +4,7 @@
 <head>
 	<title>QGIS 2018</title>
 	<link target="_blank" href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style>
 		/*
 			SLIDE STYLES:
@@ -135,6 +136,7 @@
 		    padding: 2px;
 				margin: 10px;
 				word-break: break-all;
+				white-space: pre;
 				background-color: #f2f2f2;
 				color: #5b5b5b;
 		    font:25px Monaco,Consolas,"Andale  Mono","DejaVu Sans Mono",monospace;
@@ -341,9 +343,19 @@
 	<img src="images/githubbh.png"/>
 </div>
 
+<div class="slide image_bottom">
+	<p>You'll also want a code editor that lets you work on a site as a project. There are many out there, I use <a target="_blank" href="https://atom.io/">Atom</a>.</p>
+	<img src="images/atom.png"/>
+</div>
+
 <div class="slide image_bottom bigger">
 	<p>Check out the examples for customization ideas.</p>
 	<img src="images/examples.png"/>
+</div>
+
+<div class="slide image_bottom">
+	<p>I benefited greatly from the <a target="_blank" href="https://github.com/cityofsandiego/seaboard">City of San Diego's code</a>. Thank you to them for being open!</p>
+	<img src="images/sandiego.png"/>
 </div>
 
 <div class="slide image_bottom">
@@ -354,11 +366,6 @@
 <div class="slide image_bottom">
 	<p>You don't need to know Bootstrap to use JKAN. You can even customize your css (style) to match your brand using their tool!</p>
 	<img src="images/customboot.png"/>
-</div>
-
-<div class="slide image_bottom">
-	<p>Fill out some info about your site in the _config.yml file.</p>
-	<img src="images/config.png"/>
 </div>
 
 <div class="slide image_bottom">
@@ -391,6 +398,11 @@
 </div>
 
 <div class="slide image_bottom">
+	<p>These categories show up on the main page as tiles and on the Datasets page.</p>
+	<img src="images/bhcategories.png"/>
+</div>
+
+<div class="slide image_bottom">
 	<p>Recommendation:<br><br>Start with datasets that are already published, but not in a machine-readable format.</p>
 	<img src="images/no.png"/>
 </div>
@@ -401,8 +413,18 @@
 </div>
 
 <div class="slide image_bottom">
+	<p>Salaries data that was available as PDF is now available as a csv.</p>
+	<img src="images/bhsalaries.png"/>
+</div>
+
+<div class="slide image_bottom">
 	<p>Similary, look for data shared on maps that folks might like to layer on their own map for further analysis.</p>
 	<img src="images/bikemap.png"/>
+</div>
+
+<div class="slide image_bottom">
+	<p>Bike racks and routes data that was only viewable on a map, is now available as shapefiles.</p>
+	<img src="images/bhbikeracks.png"/>
 </div>
 
 <div class="slide image_full">
@@ -422,9 +444,32 @@
 	Go to <code>http://localhost:4000</code> in a web browser</p>
 </div>
 
+<div class="slide">
+	<p>To build the static site, type at a command prompt (from your project folder):<br>
+	<code>bundle exec jekyll build</code><br></p>
+</div>
+
 <div class="slide image_full">
 	<p>6: Copy site to web server</p>
 	<img src="images/sea.jpg"/>
+</div>
+
+<div class="slide">
+	<p>Your ready-to-host web site is stored in the _site folder. Copy the contents of this folder to your web server.</p>
+</div>
+
+<div class="slide">
+	<p>To make things easier and avoid user error, you can use a Python script to automate:
+	<code>import os, distutils.dir_util
+
+devFolder = 'I:\Development\opendata'
+siteFolder = '//appserver/files/opendata'
+
+# update site
+os.chdir(devFolder)
+os.system('bundle exec jekyll build');
+distutils.dir_util.copy_tree(devFolder +'\_site', siteFolder)</code>
+	</p>
 </div>
 
 <div class="slide image_full">
@@ -432,8 +477,40 @@
 	<img src="images/boat.jpg"/>
 </div>
 
+<div class="slide">
+	<p>Document your procedure and teach someone else how to update the site.<br><br>
+	You can do this with a tiny team (but redundancy is good).</p>
+</div>
+
 <div class="slide black">
 	<p>3: Handling data<br></p>
+</div>
+
+<div class="slide image_bottom">
+	<p>Automation is your friend!</p>
+	<img src="images/cog.png"/>
+</div>
+
+<div class="slide">
+	<p>For frequently modified files, establish a storage location and automatically copy the data to your web accessible storage via Python, SSRS, or similar.</p>
+</div>
+
+<div class="slide image_bottom">
+	<p>Keep a data inventory and assign evey dataset to a single person who will be responsible for it.</p>
+	<img src="images/table.png"/>
+</div>
+
+<div class="slide image_full">
+	<p>That's all for now!</p>
+	<img src="images/boat.jpg"/>
+</div>
+
+<div class="slide black">
+	<p>Keep in touch!<br><br>
+	<i class="fa fa-twitter"></i> &nbsp <a target="_blank" href="https://twitter.com/bondaharper">@bondaharper</a><br>
+  <i class="fa fa-linkedin"></i> &nbsp <a target="_blank" href="https://www.linkedin.com/in/bondharper/">bond harper</a><br>
+	<i class="fa fa-envelope"></i> &nbsp <a target="_top" href="mailto:bharper@beverlyhills.org?">email</a>
+</p>
 </div>
 
 <script>
